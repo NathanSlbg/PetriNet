@@ -5,11 +5,9 @@ import java.util.ArrayList;
 public class Transition {
 
 // Rajouter liste de edge_in et edge_out
-	private int id;
 	private ArrayList<Edge_in> liste_edge_in;
 	private ArrayList<Edge_out> liste_edge_out;
-	public Transition(int id) {
-		this.id = id;
+	public Transition() {
 		liste_edge_in = new ArrayList<Edge_in>();
 		liste_edge_out = new ArrayList<Edge_out>();
 	}
@@ -20,6 +18,7 @@ public class Transition {
 			if (element.IsTriggerable()==false) {
 				test=false;
 			}
+		}
 		if (test==true) {
 			for (Edge_in edg_in : liste_edge_in) {
 				edg_in.Trigger();
@@ -28,6 +27,8 @@ public class Transition {
 				edg_out.Trigger();
 			}
 		}
+		else {
+			System.out.println("La transition n'est pas tirable");
 		}
 	}
 	

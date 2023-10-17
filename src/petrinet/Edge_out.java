@@ -1,7 +1,5 @@
 package petrinet;
 
-
-
 public class Edge_out extends Edge{
 
 	public Edge_out(int value, Place place) {

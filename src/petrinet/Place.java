@@ -5,19 +5,13 @@ public class Place {
 // Rajouter liste de edge_in et edge_out
 	
 	private int jeton;
-	private Edge edge;
 
-	public Place(int jeton, int place_id) {
+	public Place(int jeton) {
 		this.jeton = jeton;
-		this.edge = edge;
 	}
 	
 	public int getJeton() {
 		return jeton;
-	}
-
-	public Edge getEdge() {
-		return edge;
 	}
 
 	public void Remove(int value) {

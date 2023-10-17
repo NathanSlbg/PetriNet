@@ -9,8 +9,8 @@ public class Edge_in extends Edge{
 		super(value, place);
 		// TODO Auto-generated constructor stub
 	}
-
-	public boolean IsTrigerrable() {
+	
+	public boolean IsTriggerable() {
 		if (this.getValue()<= this.getPlace().getJeton()) {
 			return true;
 		}

@@ -14,6 +14,10 @@ public class Edge {
 		
 	}
 	
+	public boolean IsTriggerable() {
+		return true;
+	}
+
 	public int getValue() {
 		return value;
 	}
@@ -22,7 +26,5 @@ public class Edge {
 		return this.place;
 	}
 
-	public boolean IsTriggerable() {
-		return true;
-	}
+
 }
