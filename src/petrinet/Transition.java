@@ -33,9 +33,25 @@ public class Transition {
 	}
 	
 	public void ajouter_in(Edge_in edge_in) {
-		liste_edge_in.add(edge_in);
+		boolean res=true;
+		for (Edge_in e : liste_edge_in) {
+			if (e.getPlace()==edge_in.getPlace()) {
+				e.setValue(edge_in.getValue()+e.getValue());
+				res=false;
+			}
+		}
+		if(res) {
+		liste_edge_in.add(edge_in);}
 	}
 	public void ajouter_out(Edge_out edge_out) {
-		liste_edge_out.add(edge_out);
+		boolean res=true;
+		for (Edge_out e : liste_edge_out) {
+			if (e.getPlace()==edge_out.getPlace()) {
+				e.setValue(edge_out.getValue()+e.getValue());
+				res=false;
+			}
+		}
+		if(res) {
+		liste_edge_out.add(edge_out);}
 	}
 }

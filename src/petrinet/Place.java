@@ -14,10 +14,10 @@ public class Place {
 		return jeton;
 	}
 
-	public void Remove(int value) {
+	public void remove(int value) {
 		this.jeton= this.jeton - value;
 	}
-	public void Add(int value) {
+	public void add(int value) {
 		this.jeton= this.jeton + value;
 	}
 	

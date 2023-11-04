@@ -18,7 +18,7 @@ public class Edge_in extends Edge{
 	}
 	
 	public void Trigger() {
-		this.getPlace().Remove(this.getValue());
+		this.getPlace().remove(this.getValue());
 	}
 
 }

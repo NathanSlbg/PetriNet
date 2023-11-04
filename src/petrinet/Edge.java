@@ -25,6 +25,9 @@ public class Edge {
 	public Place getPlace() {
 		return this.place;
 	}
+	public void setValue(int value) {
+		this.value=value;
+	}
 
 
 }

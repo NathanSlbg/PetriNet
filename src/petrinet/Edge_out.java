@@ -7,6 +7,6 @@ public class Edge_out extends Edge{
 		// TODO Auto-generated constructor stub
 	}
 	public void Trigger() {
-		this.getPlace().Add(this.getValue());
+		this.getPlace().add(this.getValue());
 	}
 }
