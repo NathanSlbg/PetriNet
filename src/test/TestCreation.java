@@ -15,6 +15,8 @@ public class TestCreation {
 		testCreerArc();
 		System.out.println("Test du lien d'un arc et d'une transition");
 		testLierArc();
+		System.out.println("Test de la gestion des arcs doublés");
+		testArcDouble();
 	
 		
 	}
@@ -51,6 +53,15 @@ public class TestCreation {
 		for (Edge_out e : t.getListe_edge_out()) {
 			System.out.println(e.toString());
 		}
+	}
+	public static void testArcDouble() throws Exception{
+		Transition t = new Transition();
+		Place p1 = new Place(2);
+		Edge_out aSortant = new Edge_out(5,p1);
+		Edge_out aSortant2 = new Edge_out(3,p1);
+		t.ajouter_out(aSortant);
+		t.ajouter_out(aSortant2);
+		System.out.println(t.getListe_edge_out().get(0).getValue());	
 	}
 
 }

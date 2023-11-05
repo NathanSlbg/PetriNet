@@ -11,6 +11,7 @@ public class TestActivation {
 		System.out.println("Test de la situation 1");
 		test1();
 		
+		
 	
 		
 	}
