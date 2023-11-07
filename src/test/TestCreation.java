@@ -1,67 +1,60 @@
 package src.test;
 
 import src.petrinet.Edge_out;
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.MethodOrderer.*;
+
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import src.petrinet.Place;
 import src.petrinet.Transition;
 
-public class TestCreation {
+class TestCreation {
 	
-	public static void main(String[] args) throws Exception {
-		System.out.println("Test de la méthode remove");
-		testRemove();
-		System.out.println("Test de la méthode add");
-		testAdd();
-		System.out.println("Test de la création d'arc");
-		testCreerArc();
-		System.out.println("Test du lien d'un arc et d'une transition");
-		testLierArc();
-		System.out.println("Test de la gestion des arcs doublés");
-		testArcDouble();
-	
-		
-	}
-	
-	public static void testRemove() throws Exception{
+	@Test
+	void testRemove() throws Exception{
 		Place p1 = new Place(2);
 		p1.remove(1);
-		System.out.println("La place p1 a maintenant "+p1.getJeton()+" jetons");
+		assertEquals(p1.getJetons(),1);
 		p1.remove(2);
-		System.out.println("La place p1 a maintenant "+p1.getJeton()+" jetons");
+		assertEquals(p1.getJetons(),1);
 	}
-	
-	public static void testAdd() throws Exception{
+	@Test
+	void testAdd() throws Exception{
 		Place p1 = new Place(2);
 		p1.add(2);
-		System.out.println("La place p1 a maintenant "+p1.getJeton()+" jetons");
+		assertEquals(p1.getJetons(),4);
 		p1.add(-1);
-		System.out.println("La place p1 a maintenant "+p1.getJeton()+" jetons");
+		assertEquals(p1.getJetons(),3);
 		
 		
 	}
-	public static void testCreerArc() throws Exception{
+	@Test
+	void testCreerArc() throws Exception{
 		Place p1 = new Place(2);
 		Edge_out aSortant = new Edge_out(5,p1);
-		System.out.println(aSortant.toString());
+		assertEquals(aSortant.value,5);
 		Edge_out aSortant2 = new Edge_out(-1,p1);
-		System.out.println(aSortant2.toString());
+		assertEquals(aSortant2.value,-1);
 	}
-	public static void testLierArc() throws Exception{
+	@Test
+	void testLierArc() throws Exception{
 		Transition t = new Transition();
 		Place p1 = new Place(2);
 		Edge_out aSortant = new Edge_out(5,p1);
 		t.ajouter_out(aSortant);
-		for (Edge_out e : t.getListe_edge_out()) {
-			System.out.println(e.toString());
-		}
+		assertEquals(t.getListe_edge_out.get(0,aSortant));
 	}
-	public static void testArcDouble() throws Exception{
+	@Test
+	void testArcDouble() throws Exception{
 		Transition t = new Transition();
 		Place p1 = new Place(2);
 		Edge_out aSortant = new Edge_out(5,p1);
 		Edge_out aSortant2 = new Edge_out(3,p1);
 		t.ajouter_out(aSortant);
 		t.ajouter_out(aSortant2);
-		System.out.println(t.getListe_edge_out().get(0).getValue());	
+		assertEquals(t.getListe_edge_out().get(0).getValue(),8);	
 	}
 
 }
