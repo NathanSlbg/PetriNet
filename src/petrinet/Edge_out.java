@@ -1,4 +1,4 @@
-package petrinet;
+package src.petrinet;
 
 public class Edge_out extends Edge{
 

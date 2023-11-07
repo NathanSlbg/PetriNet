@@ -1,6 +1,6 @@
-package petrinet;
+package src.petrinet;
 
-public class Main {
+public class main {
 	public static void main(String[] args) {
 		
 		Place place1 = new Place(4);
