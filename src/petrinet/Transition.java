@@ -1,4 +1,4 @@
-package petrinet;
+package src.petrinet;
 
 import java.util.ArrayList;
 
@@ -70,6 +70,6 @@ public class Transition {
 	}
 	
 	public String affichage() {
-		return "transition, "+liste_edge_in.getSize()+" arcs entrants, "+liste_edge_out.getSize()+" arcs sortants";
+		return "transition, "+liste_edge_in.size()+" arcs entrants, "+liste_edge_out.size()+" arcs sortants";
 	}
 }

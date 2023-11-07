@@ -1,9 +1,9 @@
-package test;
+package src.test;
 
-import petrinet.Edge_in;
-import petrinet.Edge_out;
-import petrinet.Place;
-import petrinet.Transition;
+import src.petrinet.Edge_in;
+import src.petrinet.Edge_out;
+import src.petrinet.Place;
+import src.petrinet.Transition;
 
 public class TestActivation {
 	
