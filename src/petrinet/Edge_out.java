@@ -1,4 +1,4 @@
-package src.petrinet;
+package petrinet;
 
 public class Edge_out extends Edge{
 
@@ -11,5 +11,5 @@ public class Edge_out extends Edge{
 	}
 	
 	public String affichage() {
-		return "arc de poids "+this.getValue()+" (transition vers place avec "+super.getPlace().getJeton()+" jetons";}
+		return "arc de poids "+this.getValue()+" (transition vers place avec "+super.getPlace().getJeton()+" jetons)";}
 }

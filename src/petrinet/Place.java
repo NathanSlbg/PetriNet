@@ -1,4 +1,4 @@
-package src.petrinet;
+package petrinet;
 
 public class Place {
 
@@ -15,7 +15,9 @@ public class Place {
 	}
 
 	public void remove(int value) {
+		if (this.jeton>=value) {
 		this.jeton= this.jeton - value;
+	}
 	}
 	public void add(int value) {
 		this.jeton= this.jeton + value;

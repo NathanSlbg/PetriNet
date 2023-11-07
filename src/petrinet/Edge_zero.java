@@ -1,4 +1,4 @@
-package src.petrinet;
+package petrinet;
 
 public class Edge_zero extends Edge_in{
 
