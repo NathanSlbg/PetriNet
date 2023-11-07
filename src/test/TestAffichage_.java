@@ -1,7 +1,14 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
+package test;
+
+import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
+
+import petrinet.Edge_in;
+import petrinet.Edge_out;
+import petrinet.Petrinet;
+import petrinet.Place;
+import petrinet.Transition;
 
 class TestAffichage_ {
 	
@@ -15,23 +22,23 @@ class TestAffichage_ {
 	@Test
 	void testAfficheTransition() {
 		Transition t = new Transition();
+		Place p=new Place(2);
 		assertEquals(t.affichage(),"transition, "+0+" arcs entrants, "+0+" arcs sortants");
-		Edge_in eI = new Edge_in(2);
+		Edge_in eI = new Edge_in(2,p);
 		t.ajouter_in(eI);
 		assertEquals(t.affichage(),"transition, "+1+" arcs entrants, "+0+" arcs sortants");
-		Edge_out eO = new Edge_out(3);
+		Edge_out eO = new Edge_out(3,p);
 		t.ajouter_out(eO);
 		assertEquals(t.affichage(),"transition, "+1+" arcs entrants, "+1+" arcs sortants");
 	}
 	@Test
 	void testAfficheArc() {
-		Place p = new PLace(3);
+		Place p = new Place(3);
 		Edge_in e =new Edge_in(2,p);
 		assertEquals(e.affichage(),"arc de poids "+2+" (place avec 3 jetons vers transition)");
-		Place p = new PLace(3);
 		Edge_out eO = new Edge_out(3,p);
 		
-		assertEquals(e0.affichage(),"arc de poids 3 (place avec 3 jetons vers transition)");
+		assertEquals(eO.affichage(),"arc de poids 3 (place avec 3 jetons vers transition)");
 	}
 	@Test
 	void testAfficheReseau() {
