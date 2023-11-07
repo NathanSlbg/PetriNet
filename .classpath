@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path=""/>
-<<<<<<< HEAD
-=======
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
->>>>>>> dd854e5a1a57b21cdd5d5b5d51e026e2c1d9f44b
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
