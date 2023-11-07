@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>Petrinet_</name>
+=======
+	<name>Petri_Net</name>
+>>>>>>> 5875fa8b6232a4d318266b8446ad75ad0e81b399
 	<comment></comment>
 	<projects>
 	</projects>

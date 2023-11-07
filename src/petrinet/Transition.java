@@ -54,4 +54,20 @@ public class Transition {
 		if(res) {
 		liste_edge_out.add(edge_out);}
 	}
+
+	/**
+	 * @return the liste_edge_in
+	 */
+	public ArrayList<Edge_in> getListe_edge_in() {
+		return liste_edge_in;
+	}
+
+	/**
+	 * @return the liste_edge_out
+	 */
+	public ArrayList<Edge_out> getListe_edge_out() {
+		return liste_edge_out;
+	}
+	
+	
 }
