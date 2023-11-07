@@ -1,4 +1,4 @@
-package src.petrinet;
+package petrinet;
 
 
 

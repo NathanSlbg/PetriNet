@@ -1,14 +1,14 @@
-package src.test;
+package test;
 
-import src.petrinet.Edge_out;
+import petrinet.Edge_out;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.MethodOrderer.*;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import src.petrinet.Place;
-import src.petrinet.Transition;
+import petrinet.Place;
+import petrinet.Transition;
 
 class TestCreation {
 	
@@ -16,17 +16,17 @@ class TestCreation {
 	void testRemove() throws Exception{
 		Place p1 = new Place(2);
 		p1.remove(1);
-		assertEquals(p1.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
 		p1.remove(2);
-		assertEquals(p1.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
 	}
 	@Test
 	void testAdd() throws Exception{
 		Place p1 = new Place(2);
 		p1.add(2);
-		assertEquals(p1.getJetons(),4);
+		assertEquals(p1.getJeton(),4);
 		p1.add(-1);
-		assertEquals(p1.getJetons(),3);
+		assertEquals(p1.getJeton(),3);
 		
 		
 	}
@@ -34,9 +34,9 @@ class TestCreation {
 	void testCreerArc() throws Exception{
 		Place p1 = new Place(2);
 		Edge_out aSortant = new Edge_out(5,p1);
-		assertEquals(aSortant.value,5);
+		assertEquals(aSortant.getValue(),5);
 		Edge_out aSortant2 = new Edge_out(-1,p1);
-		assertEquals(aSortant2.value,-1);
+		assertEquals(aSortant2.getValue(),-1);
 	}
 	@Test
 	void testLierArc() throws Exception{
@@ -44,7 +44,7 @@ class TestCreation {
 		Place p1 = new Place(2);
 		Edge_out aSortant = new Edge_out(5,p1);
 		t.ajouter_out(aSortant);
-		assertEquals(t.getListe_edge_out.get(0,aSortant));
+		assertEquals(t.getListe_edge_out().get(0),aSortant);
 	}
 	@Test
 	void testArcDouble() throws Exception{

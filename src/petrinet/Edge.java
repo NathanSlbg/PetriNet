@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 	package src.petrinet;
+=======
+package petrinet;
+>>>>>>> d68dc850556bb2fb1c63544abf7f09805a318ac5
 
 public class Edge {
 	

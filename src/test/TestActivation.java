@@ -1,4 +1,4 @@
-package src.test;
+package test;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.MethodOrderer.*;
@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.MethodOrderer.*;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import src.petrinet.Edge_in;
-import src.petrinet.Edge_out;
-import src.petrinet.Place;
-import src.petrinet.Transition;
+import petrinet.Edge_in;
+import petrinet.Edge_out;
+import petrinet.Place;
+import petrinet.Transition;
 
 class TestActivation {
 	
@@ -20,7 +20,7 @@ class TestActivation {
 		Edge_in e = new Edge_in(0,p1);
 		t.ajouter_in(e);
 		t.step();
-		assertEquals(p1.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
 	}
 	@Test
 	void test2() throws Exception{
@@ -29,7 +29,7 @@ class TestActivation {
 		Edge_in e = new Edge_in(1,p1);
 		t.ajouter_in(e);
 		t.step();
-		assertEquals(p1.getJetons(),0);
+		assertEquals(p1.getJeton(),0);
 	} 
 	
 	@Test
@@ -39,7 +39,7 @@ class TestActivation {
 		Edge_in e = new Edge_in(2,p1);
 		t.ajouter_in(e);
 		t.step();
-		assertEquals(p1.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
 	}
 	@Test
 	void test4() throws Exception{
@@ -53,7 +53,7 @@ class TestActivation {
 		Edge_out e = new Edge_out(1,p1);
 		t.ajouter_out(e);
 		t.step();
-		assertEquals(p1.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
 	}
 	@Test
 	void test6() throws Exception{
@@ -65,8 +65,8 @@ class TestActivation {
 		t.ajouter_out(eO);
 		t.ajouter_in(eI);
 		t.step();
-		assertEquals(p1.getJetons(),1);
-		assertEquals(p2.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
+		assertEquals(p2.getJeton(),1);
 	}
 	@Test
 	void test7() throws Exception{
@@ -78,8 +78,8 @@ class TestActivation {
 		t.ajouter_out(eO);
 		t.ajouter_in(eI);
 		t.step();
-		assertEquals(p1.getJetons(),2);
-		assertEquals(p2.getJetons(),0);
+		assertEquals(p1.getJeton(),2);
+		assertEquals(p2.getJeton(),0);
 	}
 	@Test
 	void test8() throws Exception{
@@ -91,8 +91,8 @@ class TestActivation {
 		t.ajouter_in(e1);
 		t.ajouter_in(e2);
 		t.step();
-		assertEquals(p1.getJetons(),1);
-		assertEquals(p2.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
+		assertEquals(p2.getJeton(),1);
 	}
 	@Test
 	void test9() throws Exception{
@@ -104,8 +104,8 @@ class TestActivation {
 		t.ajouter_in(e1);
 		t.ajouter_in(e2);
 		t.step();
-		assertEquals(p1.getJetons(),1);
-		assertEquals(p2.getJetons(),0);
+		assertEquals(p1.getJeton(),1);
+		assertEquals(p2.getJeton(),0);
 	}
 	
 	void test10() throws Exception{
@@ -117,8 +117,8 @@ class TestActivation {
 		t.ajouter_in(e1);
 		t.ajouter_in(e2);
 		t.step();
-		assertEquals(p1.getJetons(),1);
-		assertEquals(p2.getJetons(),1);
+		assertEquals(p1.getJeton(),1);
+		assertEquals(p2.getJeton(),1);
 	}
 	
 	
