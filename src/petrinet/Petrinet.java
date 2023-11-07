@@ -24,20 +24,45 @@ public class Petrinet {
 	public void addEdge(Edge e) {
 		arcs.add(e);
 	}
-	public void affichage() {
-		System.out.println("Réseau de Petri");
-		System.out.println("Nombre de Places : "+this.places.size());
-		System.out.println("Nombre d'Arcs: "+this.arcs.size());
-		System.out.println("Nombre de Transitions : "+this.transitions.size());
+	
+	public void RemovePlace(Place p) {
+		places.remove(p);
+		for (Edge element :arcs) {
+			if (p.equals(element.getPlace())) {
+				arcs.remove(element)
+			}
+		}
+		for (Transition transi :transitions) {
+			for (Edge_in edge_in :transi.getListe_edge_in()) {
+				if (p.equals(edge_in.getPlace())) {
+					transi.getListe_edge_in().remove(edge_in)
+				}
+			}
+			for (Edge_out edge_out :transi.getListe_edge_out()) {
+				if (p.equals(edge_out.getPlace())) {
+					transi.getListe_edge_out().remove(edge_out)
+				}
+			}
+		}
+	}
+	
+	
+	public String affichage() {
+		String res="Réseau de Petri \nNombre de Places : "+this.places.size();
+		res= res+"\nNombre d'Arcs: "+this.arcs.size();
+		res=res+"\nNombre de Transitions : "+this.transitions.size();
+		String th="";
 		for (Edge a : arcs) {
-			System.out.println(a.affichage());
+			th=th+a.affichage()+"\n";
 			}
 		for (Place p : places) {
-			System.out.println(p.affichage());
+			th=th+p.affichage()+"\n";
 		}
 		for (Transition t : transitions) {
-			System.out.println(t.affichage());
+			th=th+t.affichage()+"\n";
 		}
+		res=res+th
+		return res;
 	}
 	
 
