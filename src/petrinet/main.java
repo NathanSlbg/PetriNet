@@ -22,6 +22,11 @@ public class main {
 		transition.ajouter_out(edge_out1);
 		transition.ajouter_out(edge_out2);
 		
+		System.out.println("Place 1 :"+place1.getJeton());
+		System.out.println("Place 2 :"+place2.getJeton());
+		System.out.println("Place 3 :"+place3.getJeton());
+		System.out.println("Place 4 :"+place4.getJeton());
+		
 		transition.step();
 		
 		System.out.println("Place 1 :"+place1.getJeton());
