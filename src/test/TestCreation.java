@@ -56,5 +56,35 @@ class TestCreation {
 		t.ajouter_out(aSortant2);
 		assertEquals(t.getListe_edge_out().get(0).getValue(),8);	
 	}
+	
+	 void testRemovePlace() {
+	    	Petrinet pn = new Petrinet();
+	        Transition t = new Transition();
+	        Place p1 = new Place(1);
+	        Place p2 = new Place(2);
+	        Place p3 = new Place(1);
+	        Edge_in e0 = new Edge_in(1, p1);
+	        Edge_in e1 = new Edge_in(1, p2);
+	        Edge_in e2 = new Edge_out(1, p3);
+	        t.ajouter_in(e0);
+	        t.ajouter_in(e1);
+	        t.ajouter_out(e2);
+	        Petrinet.addPlace(p1);
+	        Petrinet.addPlace(p2);
+	        Petrinet.addPlace(p3);
+	        Petrinet.addTransition(t);
+	        Petrinet.addEdge(e0);
+	        Petrinet.addEdge(e1);
+	        Petrinet.addEdge(e2);
+	        
+	        Petrinet.RemovePlace(p1);
+	        String texte="Réseau de Petri \nNombre de Places : 2 \nNombre d'Arcs: 2 \nNombre de Transitions : 1";
+	        texte=texte+"\narc de poids 1 (place avec 2 jetons vers transition)";
+	        texte=texte+"\narc de poids 1 (transition vers place avec 1 jetons)";
+			texte=texte+"\nplace avec 2 jeton";
+			texte=texte+"\nplace avec 1 jeton";
+			texte=texte+"\ntransition, 2 arcs entrants, 1 arcs sortants";
+			assertEquals(texte, Petrinet.affichage());
+	    }
 
 }
