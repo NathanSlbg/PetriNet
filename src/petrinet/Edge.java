@@ -28,6 +28,9 @@ public class Edge {
 	public void setValue(int value) {
 		this.value=value;
 	}
+	public String affichage() {
+		return "arc de poids "+this.getValue();
+	}
 
 
 }

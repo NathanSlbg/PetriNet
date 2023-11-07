@@ -20,5 +20,7 @@ public class Edge_in extends Edge{
 	public void Trigger() {
 		this.getPlace().remove(this.getValue());
 	}
-
-}
+	public String affichage() {
+		return "arc de poids "+this.getValue()+" (place avec "+super.getPlace().getJeton()+" jetons vers transition";
+	}
+	}

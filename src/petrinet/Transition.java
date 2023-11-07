@@ -69,5 +69,7 @@ public class Transition {
 		return liste_edge_out;
 	}
 	
-	
+	public String affichage() {
+		return "transition, "+liste_edge_in.getSize()+" arcs entrants, "+liste_edge_out.getSize()+" arcs sortants";
+	}
 }

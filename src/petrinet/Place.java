@@ -21,4 +21,13 @@ public class Place {
 		this.jeton= this.jeton + value;
 	}
 	
+	public String affichage() {
+		if (this.getJeton()==0||this.getJeton()==1) {
+			return "place avec "+this.getJeton()+" jeton";
+		}
+		else{
+			return "place avec "+this.getJeton()+" jetons";
+		}
+	}
+	
 }
