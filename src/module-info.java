@@ -1,4 +1,2 @@
-
-
-module Petrinet_ {
+module PetriNet_ {
 }
