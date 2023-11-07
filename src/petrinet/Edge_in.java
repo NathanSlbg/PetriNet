@@ -1,7 +1,5 @@
 package petrinet;
 
-import java.util.ArrayList;
-
 public class Edge_in extends Edge{
 	
 	
@@ -21,6 +19,6 @@ public class Edge_in extends Edge{
 		this.getPlace().remove(this.getValue());
 	}
 	public String affichage() {
-		return "arc de poids "+this.getValue()+" (place avec "+super.getPlace().getJeton()+" jetons vers transition";
+		return "arc de poids "+this.getValue()+" (place avec "+super.getPlace().getJeton()+" jetons vers transition)";
 	}
 	}

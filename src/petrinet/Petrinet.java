@@ -1,6 +1,6 @@
 package petrinet;
 
-
+import java.util.ArrayList;
 
 public class Petrinet {
 	
@@ -11,7 +11,7 @@ public class Petrinet {
 	
 	public Petrinet() {
 		this.arcs= new ArrayList<Edge>();
-		this.places=new ArrayList<PLace>();
+		this.places=new ArrayList<Place>();
 		this.transitions=new ArrayList<Transition>();
 	}
 	

@@ -35,10 +35,10 @@ class TestAffichage_ {
 	void testAfficheArc() {
 		Place p = new Place(3);
 		Edge_in e =new Edge_in(2,p);
-		assertEquals(e.affichage(),"arc de poids "+2+" (place avec 3 jetons vers transition)");
+		assertEquals(e.affichage(),"arc de poids 2 (place avec 3 jetons vers transition)");
 		Edge_out eO = new Edge_out(3,p);
 		
-		assertEquals(eO.affichage(),"arc de poids 3 (place avec 3 jetons vers transition)");
+		assertEquals(eO.affichage(),"arc de poids 3 (transition vers place avec 3 jetons)");
 	}
 	@Test
 	void testAfficheReseau() {
