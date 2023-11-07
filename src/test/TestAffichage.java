@@ -29,6 +29,8 @@ class TestAffichage {
 	void testAfficheArc() {
 		Edge_in e =new Edge_in(2);
 		assertEquals(e.affichage(),"arc de poids "+2);
+		Edge_out eO = new Edge_out(3);
+		assertEquals(e0.affichage(),"arc de poids 3 (place avec "+super.getPlace().getJeton()+" jetons vers transition")
 	}
 	void testAfficheReseau() {
 		Petrinet pn = new Petrinet();
