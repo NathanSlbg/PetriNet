@@ -5,10 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-
-<<<<<<< HEAD
-@TestMethodOrder(MethodOrderer.class)
-=======
 import petrinet.Edge_in;
 import petrinet.Edge_out;
 import petrinet.Petrinet;
@@ -18,7 +14,7 @@ import petrinet.Transition;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
 @TestMethodOrder(OrderAnnotation.class)
->>>>>>> 313f3b4a04d4568ae9567abf155ac2464c0e95ad
+
 class TestAffichage {
 
 	@Test
