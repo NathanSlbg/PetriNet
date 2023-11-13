@@ -1,23 +1,20 @@
-<<<<<<< HEAD
-	package src.petrinet;
-=======
+
 package petrinet;
->>>>>>> d68dc850556bb2fb1c63544abf7f09805a318ac5
 
 public class Edge {
-	
+
 	private int value;
 	private Place place;
-	
+
 	public Edge(int value, Place place) {
 		this.value = value;
 		this.place = place;
 	}
-	
+
 	public void Trigger() {
-		
+
 	}
-	
+
 	public boolean IsTriggerable() {
 		return true;
 	}
@@ -29,12 +26,13 @@ public class Edge {
 	public Place getPlace() {
 		return this.place;
 	}
+
 	public void setValue(int value) {
-		this.value=value;
-	}
-	public String affichage() {
-		return "arc de poids "+this.getValue();
+		this.value = value;
 	}
 
+	public String affichage() {
+		return "arc de poids " + this.getValue();
+	}
 
 }
