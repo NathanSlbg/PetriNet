@@ -27,6 +27,8 @@ public class Petrinet {
 	}
 
 	public void RemovePlace(Place p) {
+		// lorsque que l'on retire une place du Petrinet, il faut s'assurer
+		// que la place n'apparaît plus dans aucune liste
 		places.remove(p);
 		for (Edge element : arcs) {
 			if (p.equals(element.getPlace())) {

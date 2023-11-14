@@ -2,8 +2,6 @@ package petrinet;
 
 public class Place {
 
-// Rajouter liste de edge_in et edge_out
-
 	private int jeton;
 
 	public Place(int jeton) {

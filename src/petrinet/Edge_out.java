@@ -8,6 +8,7 @@ public class Edge_out extends Edge {
 	}
 
 	public void Trigger() {
+		// retire le nombre de jetons correspondant à la valeur de l'arc
 		this.getPlace().add(this.getValue());
 	}
 

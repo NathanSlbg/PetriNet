@@ -16,11 +16,13 @@ public class Transition {
 	public void step() {
 		boolean test = true;
 		for (Edge_in element : liste_edge_in) {
+			// parcours la liste des edge_in et verifie qu'ils sont tous tirables
 			if (element.IsTriggerable() == false) {
 				test = false;
 			}
 		}
 		if (test == true) {
+			// on "Trigger" tous les arcs entrants et sortants
 			for (Edge_in edg_in : liste_edge_in) {
 				edg_in.Trigger();
 			}
@@ -36,6 +38,8 @@ public class Transition {
 		boolean res = true;
 		for (Edge_in e : liste_edge_in) {
 			if (e.getPlace() == edge_in.getPlace()) {
+				// permet de remplacer un arc doublé par un arc 
+				// avec une valeur équivalente
 				e.setValue(edge_in.getValue() + e.getValue());
 				res = false;
 			}
@@ -49,6 +53,8 @@ public class Transition {
 		boolean res = true;
 		for (Edge_out e : liste_edge_out) {
 			if (e.getPlace() == edge_out.getPlace()) {
+				// permet de remplacer un arc doublé par un arc 
+				// avec une valeur équivalente
 				e.setValue(edge_out.getValue() + e.getValue());
 				res = false;
 			}
