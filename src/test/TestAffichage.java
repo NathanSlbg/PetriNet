@@ -19,6 +19,7 @@ class TestAffichage {
 
 	@Test
 	@Order(1)
+	/*On teste le bon affichage d'une place en faisant varier le nombre de jetons (distinction avec le pluriel sur jeton)*/
 	void testAffichePlace() {
 		Place p = new Place(1);
 		assertEquals("place avec 1 jeton", p.affichage());
@@ -28,6 +29,7 @@ class TestAffichage {
 
 	@Test
 	@Order(2)
+	/*On teste le bon affichage d'une transition en faisant varier le nombre et le type d'arcs reliés*/
 	void testAfficheTransition() {
 		Transition t = new Transition();
 		Place p = new Place(2);
@@ -42,6 +44,7 @@ class TestAffichage {
 
 	@Test
 	@Order(3)
+	/*On teste le bon affichage d'un arc d'abord entrant puis sortant*/
 	void testAfficheArc() {
 		Place p = new Place(2);
 		Edge_in e = new Edge_in(2, p);
@@ -53,6 +56,7 @@ class TestAffichage {
 
 	@Test
 	@Order(4)
+	/*On teste le bon affichage d'un réseau de Petri composé d'une transition, de trois places et de trois arcs (2 entrants et 1 sortant)*/
 	void testAfficheReseau() {
 
 		Petrinet pn = new Petrinet();
@@ -84,7 +88,10 @@ class TestAffichage {
 		texte = texte + "\ntransition, 2 arcs entrants, 1 arcs sortants";
 		assertEquals(texte, pn.affichage());
 	}
-
+	
+	@Test
+	@Order(5)
+	/*On teste la possibilité de retirer une place d'un réseau de Petri en vérifiant qu'elle n'a plus de lien avec aucun arc ni aucune transition*/
 	void testRemovePlace() {
 		Petrinet pn = new Petrinet();
 		Transition t = new Transition();
