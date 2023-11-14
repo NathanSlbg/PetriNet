@@ -5,9 +5,14 @@ public class Place {
 	private int jeton;
 
 	public Place(int jeton) {
-		this.jeton = jeton;
+		if (jeton<=0) {
+			System.out.println("Le nombre de jetons doit être positif");
+			this.jeton = Math.abs(jeton);
+		}
+		else {
+			this.jeton = jeton;
+		}
 	}
-
 	public int getJeton() {
 		return jeton;
 	}

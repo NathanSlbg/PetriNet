@@ -7,12 +7,14 @@ public class Edge {
 	private Place place;
 
 	public Edge(int value, Place place) {
-		this.value = value;
+		if (value<=0) {
+			System.out.println("La valeur de l'arc doit être positive");
+			this.value=Math.abs(value);
+		}
+		else {
+			this.value = value;
+			}
 		this.place = place;
-	}
-
-	public void Trigger() {
-
 	}
 
 	public boolean IsTriggerable() {
