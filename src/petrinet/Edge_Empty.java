@@ -6,5 +6,6 @@ public class Edge_Empty extends Edge_in{
 		super(value,place);
 		// TODO Auto-generated constructor stub
 	}
+	//
 
 }
