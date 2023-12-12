@@ -2,29 +2,37 @@ package petrinet;
 
 public class Place {
 
-// Rajouter liste de edge_in et edge_out
-	
 	private int jeton;
-	private Edge edge;
 
-	public Place(int jeton, int place_id) {
-		this.jeton = jeton;
-		this.edge = edge;
+	public Place(int jeton) {
+		if (jeton<=0) {
+			System.out.println("Le nombre de jetons doit être positif");
+			this.jeton = Math.abs(jeton);
+		}
+		else {
+			this.jeton = jeton;
+		}
 	}
-	
 	public int getJeton() {
 		return jeton;
 	}
 
-	public Edge getEdge() {
-		return edge;
+	public void remove(int value) {
+		if (this.jeton >= value) {
+			this.jeton = this.jeton - value;
+		}
 	}
 
-	public void Remove(int value) {
-		this.jeton= this.jeton - value;
+	public void add(int value) {
+		this.jeton = this.jeton + value;
 	}
-	public void Add(int value) {
-		this.jeton= this.jeton + value;
+
+	public String affichage() {
+		if (this.getJeton() == 0 || this.getJeton() == 1) {
+			return "place avec " + this.getJeton() + " jeton";
+		} else {
+			return "place avec " + this.getJeton() + " jetons";
+		}
 	}
-	
+
 }
